@@ -47,6 +47,8 @@ const mor = morgan(function (tokens, req, res) {
 app.use(mor)
 app.use(cors())
 
+app.use(express.static('build'))
+
 app.get('/api/persons', (request, response) => {
 	response.json(persons)
 })
@@ -117,4 +119,3 @@ app.post('/api/persons', (request, response) => {
 	response.json(persons)
 })
 
-//gggggggg
